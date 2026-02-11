@@ -3,43 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pink Room • Premium Nail Studio Athens</title>
-  <meta name="description" content="Pink Room – premium nail studio in Athens. Soft gel manicure, custom nail art, luxury spa pedicure, acrylic extensions. Book your appointment on Treatwell or Instagram @pinkroomathens." />
-  <meta name="keywords" content="pink room nails, nail salon Athens, gel nails Athens, nail art Athens, manicure Athens, pedicure Athens, acrylic nails, chrome nails Athens, pinkroomathens, treatwell pink room" />
+  <title>Pink Room • Premium Nail Studio Αθήνα | Gel, Nail Art, Pedi</title>
+  <meta name="description" content="Pink Room – πολυτελές στούντιο νυχιών στην Αθήνα. Μαλακό gel μανικιούρ, custom nail art, spa πεντικιούρ, ακρυλικά νύχια. Κλείσε ραντεβού στο Treatwell ή Instagram @pinkroomathens." />
+  <meta name="keywords" content="pink room, pinkroomathens, νύχια Αθήνα, gel νύχια Αθήνα, nail art Αθήνα, μανικιούρ Αθήνα, πεντικιούρ Αθήνα, ακρυλικά νύχια, chrome nails Αθήνα, spa πεντικιούρ Αθήνα" />
   <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="Pink Room • Premium Nail Studio Athens" />
-  <meta property="og:description" content="Beauty in every detail – book your appointment for gel, nail art & spa pedicure in Athens." />
+  <meta property="og:title" content="Pink Room • Premium Nail Studio Αθήνα" />
+  <meta property="og:description" content="Ομορφιά σε κάθε λεπτομέρεια – πολυτελές στούντιο νυχιών στην Αθήνα. Κλείσε τώρα!" />
   <meta property="og:image" content="img/pfp.jpg" />
-  <meta property="og:url" content="https://yourdomain.com" />
+  <meta property="og:url" content="https://pinkroom.gr" />
   <meta property="og:type" content="website" />
-  <link rel="canonical" href="https://yourdomain.com" />
-  <!-- Favicon using your logo -->
+  <link rel="canonical" href="https://pinkroom.gr" />
   <link rel="icon" type="image/jpeg" href="img/pfp.jpg">
   <link rel="apple-touch-icon" href="img/pfp.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Structured Data: NailSalon + LocalBusiness -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "NailSalon",
     "name": "Pink Room",
-    "image": "img/pfp.jpg",
+    "image": "https://pinkroom.gr/img/pfp.jpg",
     "telephone": "+30 216 2023933",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Beauty Street 123",
-      "addressLocality": "Athens",
+      "streetAddress": "Οδός Ομορφιάς 123",
+      "addressLocality": "Αθήνα",
+      "postalCode": "111 41",
       "addressCountry": "GR"
     },
-    "url": "https://yourdomain.com",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 38.0,
+      "longitude": 23.73
+    },
+    "url": "https://pinkroom.gr",
+    "priceRange": "€€",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "09:00",
+        "closes": "20:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "09:00",
+        "closes": "17:00"
+      }
+    ],
     "sameAs": [
       "https://www.instagram.com/pinkroomathens/",
       "https://www.treatwell.gr/katasthma/pink-room-athens/"
     ],
-    "description": "Premium nail studio in Athens. Soft gel manicure, custom nail art, luxury spa pedicure, acrylic extensions."
+    "description": "Πολυτελές στούντιο νυχιών στην Αθήνα. Μαλακό gel μανικιούρ, custom nail art, spa πεντικιούρ, ακρυλικές επεκτάσεις."
   }
   </script>
+
   <style>
     html {
       scroll-behavior: smooth;
@@ -609,12 +632,12 @@
         <img src="img/pfp.jpg" alt="Pink Room Logo" class="logo-img">
       </a>
       <ul id="nav-menu">
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#about">Σχετικά</a></li>
+        <li><a href="#services">Υπηρεσίες</a></li>
+        <li><a href="#gallery">Γκαλερί</a></li>
+        <li><a href="#testimonials">Μαρτυρίες</a></li>
+        <li><a href="#contact">Επικοινωνία</a></li>
+        <li><a href="#faq">Ερωτήσεις</a></li>
       </ul>
       <div class="lang-switcher">
         <button class="lang-btn" data-lang="en">EN</button>
@@ -630,60 +653,60 @@
   <header>
     <div class="container">
       <h1>Pink Room</h1>
-      <p id="hero-desc">Beauty in every detail — premium nail studio in Athens</p>
+      <p id="hero-desc">Ομορφιά σε κάθε λεπτομέρεια — premium στούντιο νυχιών στην Αθήνα</p>
       <div class="hero-buttons">
-        <a href="https://www.treatwell.gr/katasthma/pink-room-athens/?campaign_medium=clipboard&partner_id=100072281&utm_campaign=copy-link&utm_medium=partner-ecosystem&campaign_id=partner_referral&utm_source=partner&utm_content=treatwell-app-link" target="_blank" class="btn" id="book-btn">Book Appointment</a>
-        <a href="#services" class="btn btn-outline" id="services-btn">View Services</a>
+        <a href="https://www.treatwell.gr/katasthma/pink-room-athens/?campaign_medium=clipboard&partner_id=100072281&utm_campaign=copy-link&utm_medium=partner-ecosystem&campaign_id=partner_referral&utm_source=partner&utm_content=treatwell-app-link" target="_blank" class="btn" id="book-btn">Κλείστε ραντεβού</a>
+        <a href="#services" class="btn btn-outline" id="services-btn">Δείτε υπηρεσίες</a>
       </div>
     </div>
   </header>
 
   <section id="about">
     <div class="container">
-      <h2 id="about-title">About Us</h2>
-      <p id="about-p1">At Pink Room we create nail designs with attention to detail and absolute respect for your nail health. We use only high-quality, non-toxic products in a clean, calm and welcoming space.</p>
-      <p id="about-p2">Since 2020 we have become the favorite destination of hundreds of women in Athens, thanks to quality, hygiene and warm personal service.</p>
+      <h2 id="about-title">Σχετικά με εμάς</h2>
+      <p id="about-p1">Στο Pink Room δημιουργούμε σχέδια νυχιών με προσοχή στη λεπτομέρεια και απόλυτο σεβασμό στην υγεία των νυχιών σας. Χρησιμοποιούμε μόνο υψηλής ποιότητας, μη τοξικά προϊόντα σε έναν καθαρό, ήρεμο και φιλόξενο χώρο.</p>
+      <p id="about-p2">Από το 2020 έχουμε γίνει ο αγαπημένος προορισμός εκατοντάδων γυναικών στην Αθήνα, χάρη στην ποιότητα, την υγιεινή και την προσωπική, ζεστή εξυπηρέτηση.</p>
     </div>
   </section>
 
   <section id="services">
     <div class="container">
-      <h2 id="services-title">Our Services</h2>
+      <h2 id="services-title">Οι υπηρεσίες μας</h2>
       <div class="grid">
         <div class="card">
-          <img src="service/gel.png" alt="Soft Gel Manicure" class="service-icon">
+          <img src="service/gel.png" alt="Μαλακό Gel Μανικιούρ – Pink Room Αθήνα" class="service-icon" loading="lazy">
           <div class="card-content">
-            <h3>Soft Gel Manicure</h3>
-            <p>Natural look, long-lasting, zero damage.</p>
-            <div class="price">from €65</div>
-            <a href="https://www.treatwell.gr/katasthma/pink-room-athens/?campaign_medium=clipboard&partner_id=100072281&utm_campaign=copy-link&utm_medium=partner-ecosystem&campaign_id=partner_referral&utm_source=partner&utm_content=treatwell-app-link" target="_blank" class="btn btn-outline">Book Now</a>
+            <h3>Μαλακό Gel Μανικιούρ</h3>
+            <p>Φυσική εμφάνιση, μεγάλη διάρκεια, μηδενική φθορά.</p>
+            <div class="price">από 65 €</div>
+            <a href="https://www.treatwell.gr/katasthma/pink-room-athens/?campaign_medium=clipboard&partner_id=100072281&utm_campaign=copy-link&utm_medium=partner-ecosystem&campaign_id=partner_referral&utm_source=partner&utm_content=treatwell-app-link" target="_blank" class="btn btn-outline">Κλείστε ώρα</a>
           </div>
         </div>
         <div class="card">
-          <img src="service/custom.png" alt="Custom Nail Art" class="service-icon">
+          <img src="service/custom.png" alt="Custom Nail Art – Προσαρμοσμένα σχέδια Pink Room" class="service-icon" loading="lazy">
           <div class="card-content">
             <h3>Custom Nail Art</h3>
-            <p>Hand-painted designs, chrome, 3D – whatever you dream of.</p>
-            <div class="price">from €85</div>
-            <a href="https://www.treatwell.gr/katasthma/pink-room-athens/?campaign_medium=clipboard&partner_id=100072281&utm_campaign=copy-link&utm_medium=partner-ecosystem&campaign_id=partner_referral&utm_source=partner&utm_content=treatwell-app-link" target="_blank" class="btn btn-outline">Book Now</a>
+            <p>Χειροποίητα σχέδια, chrome, 3D, ό,τι ονειρευτείτε.</p>
+            <div class="price">από 85 €</div>
+            <a href="https://www.treatwell.gr/katasthma/pink-room-athens/?campaign_medium=clipboard&partner_id=100072281&utm_campaign=copy-link&utm_medium=partner-ecosystem&campaign_id=partner_referral&utm_source=partner&utm_content=treatwell-app-link" target="_blank" class="btn btn-outline">Κλείστε ώρα</a>
           </div>
         </div>
         <div class="card">
-          <img src="service/pedicure.png" alt="Luxury Spa Pedicure" class="service-icon">
+          <img src="service/pedicure.png" alt="Πολυτελές Spa Πεντικιούρ – Pink Room Αθήνα" class="service-icon" loading="lazy">
           <div class="card-content">
-            <h3>Luxury Spa Pedicure</h3>
-            <p>Deep care, massage, premium polish.</p>
-            <div class="price">€78</div>
-            <a href="https://www.treatwell.gr/katasthma/pink-room-athens/?campaign_medium=clipboard&partner_id=100072281&utm_campaign=copy-link&utm_medium=partner-ecosystem&campaign_id=partner_referral&utm_source=partner&utm_content=treatwell-app-link" target="_blank" class="btn btn-outline">Book Now</a>
+            <h3>Πολυτελές Spa Πεντικιούρ</h3>
+            <p>Βαθιά περιποίηση, μασάζ, premium βερνίκι.</p>
+            <div class="price">78 €</div>
+            <a href="https://www.treatwell.gr/katasthma/pink-room-athens/?campaign_medium=clipboard&partner_id=100072281&utm_campaign=copy-link&utm_medium=partner-ecosystem&campaign_id=partner_referral&utm_source=partner&utm_content=treatwell-app-link" target="_blank" class="btn btn-outline">Κλείστε ώρα</a>
           </div>
         </div>
         <div class="card">
-          <img src="service/extensions.png" alt="Acrylic Extensions" class="service-icon">
+          <img src="service/extensions.png" alt="Ακρυλικές Επεκτάσεις – Pink Room Αθήνα" class="service-icon" loading="lazy">
           <div class="card-content">
-            <h3>Acrylic Extensions</h3>
-            <p>Durable, customizable, for bold looks.</p>
-            <div class="price">from €95</div>
-            <a href="https://www.treatwell.gr/katasthma/pink-room-athens/?campaign_medium=clipboard&partner_id=100072281&utm_campaign=copy-link&utm_medium=partner-ecosystem&campaign_id=partner_referral&utm_source=partner&utm_content=treatwell-app-link" target="_blank" class="btn btn-outline">Book Now</a>
+            <h3>Ακρυλικές Επεκτάσεις</h3>
+            <p>Ανθεκτικές, προσαρμοσμένες, για δυναμική εμφάνιση.</p>
+            <div class="price">από 95 €</div>
+            <a href="https://www.treatwell.gr/katasthma/pink-room-athens/?campaign_medium=clipboard&partner_id=100072281&utm_campaign=copy-link&utm_medium=partner-ecosystem&campaign_id=partner_referral&utm_source=partner&utm_content=treatwell-app-link" target="_blank" class="btn btn-outline">Κλείστε ώρα</a>
           </div>
         </div>
       </div>
@@ -692,20 +715,20 @@
 
   <section id="gallery">
     <div class="container">
-      <h2 id="gallery-title">Our Work</h2>
+      <h2 id="gallery-title">Η δουλειά μας</h2>
       <div class="carousel">
         <div class="carousel-inner" id="carouselInner">
           <div class="carousel-item">
-            <img src="img/gallery1.jpg" alt="Pink Room – Soft gel manicure Athens" loading="lazy">
+            <img src="img/gallery1.jpg" alt="Pink Room – Μαλακό gel μανικιούρ Αθήνα" loading="lazy">
           </div>
           <div class="carousel-item">
-            <img src="img/gallery2.jpg" alt="Pink Room – Custom nail art & chrome Athens" loading="lazy">
+            <img src="img/gallery2.jpg" alt="Pink Room – Custom nail art & chrome Αθήνα" loading="lazy">
           </div>
           <div class="carousel-item">
-            <img src="img/gallery3.jpg" alt="Pink Room – Luxury spa pedicure" loading="lazy">
+            <img src="img/gallery3.jpg" alt="Pink Room – Πολυτελές spa πεντικιούρ" loading="lazy">
           </div>
           <div class="carousel-item">
-            <img src="img/gallery4.jpg" alt="Pink Room – Acrylic extensions Athens" loading="lazy">
+            <img src="img/gallery4.jpg" alt="Pink Room – Ακρυλικές επεκτάσεις Αθήνα" loading="lazy">
           </div>
           <div class="carousel-item">
             <img src="img/gallery5.jpg" alt="Pink Room – French & strass designs" loading="lazy">
@@ -716,10 +739,10 @@
         </div>
         <div class="carousel-controls">
           <button class="carousel-btn prev">
-            <img src="img/arrow.png" alt="Previous slide">
+            <img src="img/arrow.png" alt="Προηγούμενο slide">
           </button>
           <button class="carousel-btn next">
-            <img src="img/arrow.png" alt="Next slide">
+            <img src="img/arrow.png" alt="Επόμενο slide">
           </button>
         </div>
       </div>
@@ -728,19 +751,19 @@
 
   <section id="testimonials">
     <div class="container">
-      <h2 id="testimonials-title">What Our Clients Say</h2>
+      <h2 id="testimonials-title">Τι λένε οι πελάτισσές μας</h2>
       <div class="testimonial-grid">
         <div class="testimonial">
-          <p>"My nails became works of art! The space is wonderful and relaxing."</p>
-          <cite>— Sofia L.</cite>
+          <p>«Τα νύχια μου έγιναν έργα τέχνης! Ο χώρος είναι υπέροχος και χαλαρωτικός.»</p>
+          <cite>— Σοφία Λ.</cite>
         </div>
         <div class="testimonial">
-          <p>"The best pedicure I've ever had. Always clean and professional."</p>
-          <cite>— Maria D.</cite>
+          <p>«Το καλύτερο πεντικιούρ που έχω κάνει ποτέ. Πάντα καθαρά και επαγγελματικά.»</p>
+          <cite>— Μαρία Δ.</cite>
         </div>
         <div class="testimonial">
-          <p>"Love the custom designs. They last weeks without any problem."</p>
-          <cite>— Emma R.</cite>
+          <p>«Οι custom σχεδίες μου κρατάνε εβδομάδες χωρίς κανένα πρόβλημα.»</p>
+          <cite>— Έμμα Ρ.</cite>
         </div>
       </div>
     </div>
@@ -748,12 +771,12 @@
 
   <section id="contact">
     <div class="container">
-      <h2 id="contact-title">Contact</h2>
+      <h2 id="contact-title">Επικοινωνία</h2>
       <div class="contact-content">
-        <p>Book your appointment on Treatwell or Instagram @pinkroomathens!</p>
-        <a href="https://www.treatwell.gr/katasthma/pink-room-athens/?campaign_medium=clipboard&partner_id=100072281&utm_campaign=copy-link&utm_medium=partner-ecosystem&campaign_id=partner_referral&utm_source=partner&utm_content=treatwell-app-link" target="_blank" class="btn">Book on Treatwell</a>
+        <p>Κλείστε ραντεβού στο Treatwell ή Instagram @pinkroomathens!</p>
+        <a href="https://www.treatwell.gr/katasthma/pink-room-athens/?campaign_medium=clipboard&partner_id=100072281&utm_campaign=copy-link&utm_medium=partner-ecosystem&campaign_id=partner_referral&utm_source=partner&utm_content=treatwell-app-link" target="_blank" class="btn">Κλείστε ώρα στο Treatwell</a>
         <p style="margin-top:2rem; color:var(--gray);">
-          Phone: 216 2023933 | Athens
+          Τηλέφωνο: 216 2023933 | Αθήνα
         </p>
       </div>
       <div class="map">
@@ -764,47 +787,47 @@
 
   <section id="faq">
     <div class="container">
-      <h2 id="faq-title">Frequently Asked Questions</h2>
+      <h2 id="faq-title">Συχνές ερωτήσεις</h2>
 
       <div class="faq-item">
-        <button class="faq-question">How long does a gel manicure last?</button>
+        <button class="faq-question">Πόσο διαρκεί ένα gel μανικιούρ;</button>
         <div class="faq-answer">
-          <p>Usually 3–4 weeks without chipping when properly maintained.</p>
+          <p>Συνήθως 3–4 εβδομάδες χωρίς ξεφλούδισμα, όταν γίνεται σωστή συντήρηση.</p>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question">Do I need to book in advance?</button>
+        <button class="faq-question">Πρέπει να κλείσω ραντεβού από πριν;</button>
         <div class="faq-answer">
-          <p>Yes, especially on weekends. Ideally 5–14 days in advance.</p>
+          <p>Ναι, ειδικά τα Σαββατοκύριακα. Ιδανικά 5–14 μέρες νωρίτερα.</p>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question">Are your products safe and vegan?</button>
+        <button class="faq-question">Τα προϊόντα σας είναι ασφαλή και vegan;</button>
         <div class="faq-answer">
-          <p>Most are 10-free, vegan & cruelty-free. Priority is nail & skin health.</p>
+          <p>Τα περισσότερα είναι 10-free, vegan & cruelty-free. Προτεραιότητα η υγεία νυχιών & δέρματος.</p>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question">Can I get a refill instead of full set?</button>
+        <button class="faq-question">Μπορώ να κάνω refill αντί για full set;</button>
         <div class="faq-answer">
-          <p>Yes, when extensions are in good condition — it's also more economical.</p>
+          <p>Ναι, όταν οι επεκτάσεις είναι σε καλή κατάσταση — είναι και πιο οικονομικό.</p>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question">What is your cancellation policy?</button>
+        <button class="faq-question">Ποια είναι η πολιτική ακύρωσης;</button>
         <div class="faq-answer">
-          <p>Free cancellation up to 24 hours before. After that 50% charge.</p>
+          <p>Δωρεάν ακύρωση μέχρι 24 ώρες πριν. Μετά χρεώνεται 50%.</p>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question">Do you have gift cards?</button>
+        <button class="faq-question">Έχετε δωροκάρτες;</button>
         <div class="faq-answer">
-          <p>Yes, from €50 — ideal for gifts or self-care.</p>
+          <p>Ναι, από 50 € — ιδανικές για δώρο ή περιποίηση εαυτού.</p>
         </div>
       </div>
     </div>
@@ -812,7 +835,7 @@
 
   <footer>
     <div class="container">
-      <p id="footer-text">© 2026 Pink Room — Handcrafted beauty • Athens</p>
+      <p id="footer-text">© 2026 Pink Room — Χειροποίητη ομορφιά • Αθήνα</p>
       <a href="https://www.instagram.com/pinkroomathens/" target="_blank">
         <svg class="insta-icon" viewBox="0 0 24 24">
           <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm5.25-4.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/>
@@ -822,10 +845,10 @@
   </footer>
 
   <a href="tel:2162023933" class="floating-call">
-    <img src="https://uxwing.com/wp-content/themes/uxwing/download/communication-chat-call/phone-call-white-icon.png" alt="Call 216 2023933">
+    <img src="https://uxwing.com/wp-content/themes/uxwing/download/communication-chat-call/phone-call-white-icon.png" alt="Κλήση 216 2023933">
   </a>
   <a href="#" class="back-to-top" id="back-to-top">
-    <img src="img/arrow.png" alt="Back to top">
+    <img src="img/arrow.png" alt="Πάνω">
   </a>
 
   <script>
