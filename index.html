@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pink Room • Premium Nail Studio Αθήνα</title>
+  <meta name="description" content="Pink Room – premium nail studio στην Αθήνα. Μαλακό gel μανικιούρ, custom nail art, πολυτελές spa πεντικιούρ, ακρυλικές επεκτάσεις. Κλείστε ραντεβού στο Instagram @pinkroomathens." />
+  <meta name="keywords" content="pink room nails, nail salon Αθήνα, gel νύχια Αθήνα, nail art Αθήνα, μανικιούρ Αθήνα, πεντικιούρ Αθήνα, ακρυλικά νύχια, chrome nails Αθήνα, pinkroomathens" />
+  <!-- Favicon & logo using your pfp.jpg -->
+  <link rel="icon" type="image/jpeg" href="img/pfp.jpg">
+  <link rel="apple-touch-icon" href="img/pfp.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:        #fdfaf7;
+      --text:       #2d1e1a;
+      --accent:     #e8c1b5;
+      --accent-dark:#d4a89a;
+      --gray:       #6b5e5a;
+      --light:      #f9f5f2;
+      --insta:      #E1306C;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+    }
+
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 5vw;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(253,250,247,0.96);
+      backdrop-filter: blur(12px);
+      z-index: 100;
+      padding: 1rem 0;
+    }
+
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-img {
+      height: 48px;
+      width: auto;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: var(--gray);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: color 0.25s;
+    }
+
+    nav a:hover { color: var(--accent-dark); }
+
+    .lang-switcher {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.95rem;
+      color: var(--gray);
+    }
+
+    .lang-btn {
+      background: none;
+      border: none;
+      font: inherit;
+      color: inherit;
+      cursor: pointer;
+      padding: 0 0.4rem;
+    }
+
+    .lang-btn.active {
+      color: var(--accent-dark);
+      font-weight: 600;
+    }
+
+    .burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .burger span {
+      width: 28px;
+      height: 3px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: all 0.4s;
+    }
+
+    .burger.active span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
+    .burger.active span:nth-child(2) { opacity: 0; }
+    .burger.active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
+
+    @media (max-width: 860px) {
+      nav ul { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: rgba(253,250,247,0.98); padding: 1.6rem 0; flex-direction: column; align-items: center; gap: 1.8rem; box-shadow: 0 6px 20px rgba(0,0,0,0.07); }
+      nav ul.active { display: flex; }
+      .burger { display: flex; }
+      .lang-switcher { margin-right: 1.4rem; }
+    }
+
+    /* Hero */
+    header {
+      padding-top: clamp(10rem, 18vh, 14rem);
+      padding-bottom: clamp(4rem, 8vh, 6rem);
+      text-align: center;
+      position: relative;
+      background: linear-gradient(to bottom, #fffcf9, var(--bg));
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1519415943484-9fa1873496d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+      opacity: 0.08;
+      z-index: 0;
+    }
+
+    header > .container { position: relative; z-index: 1; }
+
+    header h1 {
+      font-size: clamp(5rem, 13vw, 11rem);
+      line-height: 0.92;
+      margin-bottom: 0.6rem;
+      color: var(--text);
+    }
+
+    header p {
+      font-size: clamp(1.4rem, 3.6vw, 1.8rem);
+      color: var(--gray);
+      max-width: 720px;
+      margin: 0 auto 2.4rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      justify-content: center;
+    }
+
+    .btn, .btn-outline {
+      padding: clamp(0.9rem, 2.5vw, 1.1rem) clamp(1.8rem, 4vw, 2.4rem);
+      font-size: clamp(1rem, 3vw, 1.1rem);
+      border-radius: 999px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      min-width: 220px;
+      text-align: center;
+    }
+
+    .btn {
+      background: var(--accent);
+      color: white;
+    }
+
+    .btn:hover { background: var(--accent-dark); transform: translateY(-2px); }
+
+    .btn-outline {
+      background: transparent;
+      border: 1.8px solid var(--accent-dark);
+      color: var(--text);
+    }
+
+    .btn-outline:hover {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
+
+    @media (max-width: 640px) {
+      .hero-buttons { flex-direction: column; align-items: center; gap: 1rem; }
+      .btn, .btn-outline { width: 100%; max-width: 340px; }
+    }
+
+    /* Sections */
+    section {
+      padding: clamp(6rem, 8vh, 8rem) 0;
+    }
+
+    h2 {
+      font-size: clamp(2.8rem, 7vw, 5.2rem);
+      text-align: center;
+      margin-bottom: 1.4em;
+      color: var(--text);
+    }
+
+    /* About */
+    #about {
+      background: var(--light);
+      text-align: center;
+    }
+
+    #about p {
+      max-width: 780px;
+      margin: 0 auto 1.6rem;
+      font-size: 1.16rem;
+      color: var(--gray);
+    }
+
+    /* Services with your icons */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.4rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 1.2rem;
+      overflow: hidden;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.05);
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      text-align: center;
+      padding: 2rem 1.5rem;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+    }
+
+    .card .service-icon {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 1.4rem;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover .service-icon {
+      transform: scale(1.1);
+    }
+
+    .card h3 {
+      font-size: 1.7rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .price {
+      font-size: 1.42rem;
+      color: var(--accent-dark);
+      font-weight: 600;
+      margin: 0.9rem 0 1.2rem;
+    }
+
+    /* Gallery Carousel */
+    #gallery {
+      background: var(--light);
+    }
+
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      margin: 2rem 0;
+    }
+
+    .carousel-inner {
+      display: flex;
+      transition: transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+      touch-action: pan-y;
+    }
+
+    .carousel-item {
+      min-width: 100%;
+      height: 480px;
+      position: relative;
+    }
+
+    .carousel-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 1.2rem;
+      loading: lazy;
+    }
+
+    .carousel-controls {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1rem;
+      pointer-events: none;
+    }
+
+    .carousel-btn {
+      pointer-events: auto;
+      background: rgba(255,255,255,0.7);
+      border: none;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .carousel-btn:hover {
+      background: white;
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 640px) {
+      .carousel-item { height: 360px; }
+      .carousel-btn { width: 44px; height: 44px; font-size: 1.3rem; }
+    }
+
+    /* Testimonials */
+    #testimonials {
+      background: var(--light);
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2.4rem;
+    }
+
+    .testimonial {
+      background: white;
+      padding: 2.2rem 2rem;
+      border-radius: 1.1rem;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    .testimonial p {
+      font-style: italic;
+      color: var(--gray);
+      margin-bottom: 1.2rem;
+      font-size: 1.08rem;
+    }
+
+    .testimonial cite {
+      font-weight: 500;
+      color: var(--text);
+      font-size: 1rem;
+    }
+
+    /* Contact */
+    #contact .contact-content {
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto 3.5rem;
+    }
+
+    #contact .contact-content p {
+      font-size: 1.2rem;
+      color: var(--gray);
+      margin-bottom: 2rem;
+    }
+
+    .map {
+      height: 440px;
+      border-radius: 1.2rem;
+      overflow: hidden;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.06);
+    }
+
+    /* FAQ */
+    #faq {
+      background: var(--light);
+    }
+
+    .faq-item {
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-question {
+      width: 100%;
+      padding: 1.3rem 0;
+      text-align: left;
+      background: none;
+      border: none;
+      font-size: 1.14rem;
+      font-weight: 500;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-question::after {
+      content: '↓';
+      font-size: 1.05rem;
+      transition: transform 0.35s;
+    }
+
+    .faq-question.active::after { transform: rotate(180deg); }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.45s ease;
+      color: var(--gray);
+    }
+
+    .faq-answer.show {
+      max-height: 480px;
+      padding-bottom: 1.8rem;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 7vh 0 5vh;
+      color: var(--gray);
+      font-size: 0.95rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .insta-icon {
+      width: 32px;
+      height: 32px;
+      fill: var(--insta);
+      transition: transform 0.3s;
+    }
+
+    .insta-icon:hover {
+      transform: scale(1.15);
+    }
+
+    /* Floating buttons */
+    .floating-call {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 60px;
+      height: 60px;
+      background: var(--accent);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.14);
+      z-index: 99;
+      transition: all 0.3s ease;
+    }
+
+    .floating-call:hover {
+      background: var(--accent-dark);
+      transform: scale(1.08);
+    }
+
+    .floating-call img { width: 28px; }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 7rem;
+      right: 2rem;
+      width: 60px;
+      height: 60px;
+      background: #61544e;
+      color: white;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 99;
+      font-size: 1.7rem;
+    }
+
+    .back-to-top.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover { transform: translateY(-4px); }
+
+    @media (max-width: 640px) {
+      header { padding-top: 14vh; padding-bottom: 18vh; }
+      section { padding: 8vh 0; }
+      h2 { font-size: clamp(2.6rem, 9vw, 4.8rem); }
+      .grid { gap: 2rem; }
+      .card .service-icon { height: 70px; }
+      .map { height: 340px; }
+      .floating-call, .back-to-top { width: 56px; height: 56px; }
+      .floating-call img { width: 26px; }
+      .back-to-top { bottom: 6rem; font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <img src="img/pfp.jpg" alt="Pink Room Logo" class="logo-img">
+      <ul id="nav-menu">
+        <li><a href="#about">Σχετικά</a></li>
+        <li><a href="#services">Υπηρεσίες</a></li>
+        <li><a href="#gallery">Γκαλερί</a></li>
+        <li><a href="#testimonials">Μαρτυρίες</a></li>
+        <li><a href="#contact">Επικοινωνία</a></li>
+        <li><a href="#faq">Ερωτήσεις</a></li>
+      </ul>
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <span>/</span>
+        <button class="lang-btn active" data-lang="el">EL</button>
+      </div>
+      <div class="burger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <div class="container">
+      <h1>Pink Room</h1>
+      <p id="hero-desc">Ομορφιά σε κάθε λεπτομέρεια — premium στούντιο νυχιών στην Αθήνα</p>
+      <div class="hero-buttons">
+        <a href="https://www.instagram.com/pinkroomathens/" target="_blank" class="btn" id="book-btn">Κλείστε ραντεβού</a>
+        <a href="#services" class="btn btn-outline" id="services-btn">Δείτε υπηρεσίες</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <h2 id="about-title">Σχετικά με εμάς</h2>
+      <p id="about-p1">Στο Pink Room δημιουργούμε σχέδια νυχιών με προσοχή στη λεπτομέρεια και απόλυτο σεβασμό στην υγεία των νυχιών σας. Χρησιμοποιούμε μόνο υψηλής ποιότητας, μη τοξικά προϊόντα σε έναν καθαρό, ήρεμο και φιλόξενο χώρο.</p>
+      <p id="about-p2">Από το 2020 έχουμε γίνει ο αγαπημένος προορισμός εκατοντάδων γυναικών στην Αθήνα, χάρη στην ποιότητα, την υγιεινή και την προσωπική, ζεστή εξυπηρέτηση.</p>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <h2 id="services-title">Οι υπηρεσίες μας</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="service/gel.png" alt="Μαλακό Gel Μανικιούρ" class="service-icon">
+          <div class="card-content">
+            <h3>Μαλακό Gel Μανικιούρ</h3>
+            <p>Φυσική εμφάνιση, μεγάλη διάρκεια, μηδενική φθορά.</p>
+            <div class="price">από 65 €</div>
+            <a href="https://www.instagram.com/pinkroomathens/" target="_blank" class="btn btn-outline">Κλείστε ώρα</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="service/custom.png" alt="Προσαρμοσμένο Nail Art" class="service-icon">
+          <div class="card-content">
+            <h3>Custom Nail Art</h3>
+            <p>Χειροποίητα σχέδια, chrome, 3D, ό,τι ονειρευτείτε.</p>
+            <div class="price">από 85 €</div>
+            <a href="https://www.instagram.com/pinkroomathens/" target="_blank" class="btn btn-outline">Κλείστε ώρα</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="service/pedicure.png" alt="Πολυτελές Spa Πεντικιούρ" class="service-icon">
+          <div class="card-content">
+            <h3>Πολυτελές Spa Πεντικιούρ</h3>
+            <p>Βαθιά περιποίηση, μασάζ, premium βερνίκι.</p>
+            <div class="price">78 €</div>
+            <a href="https://www.instagram.com/pinkroomathens/" target="_blank" class="btn btn-outline">Κλείστε ώρα</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="service/extensions.png" alt="Ακρυλικές Επεκτάσεις" class="service-icon">
+          <div class="card-content">
+            <h3>Ακρυλικές Επεκτάσεις</h3>
+            <p>Ανθεκτικές, προσαρμοσμένες, για δυναμική εμφάνιση.</p>
+            <div class="price">από 95 €</div>
+            <a href="https://www.instagram.com/pinkroomathens/" target="_blank" class="btn btn-outline">Κλείστε ώρα</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="container">
+      <h2 id="gallery-title">Η δουλειά μας</h2>
+      <div class="carousel">
+        <div class="carousel-inner" id="carouselInner">
+          <div class="carousel-item">
+            <img src="img/gallery1.jpg" alt="Pink Room – Μαλακό gel μανικιούρ Αθήνα" loading="lazy">
+          </div>
+          <div class="carousel-item">
+            <img src="img/gallery2.jpg" alt="Pink Room – Custom nail art & chrome Αθήνα" loading="lazy">
+          </div>
+          <div class="carousel-item">
+            <img src="img/gallery3.jpg" alt="Pink Room – Πολυτελές spa πεντικιούρ" loading="lazy">
+          </div>
+          <div class="carousel-item">
+            <img src="img/gallery4.jpg" alt="Pink Room – Ακρυλικές επεκτάσεις Αθήνα" loading="lazy">
+          </div>
+          <div class="carousel-item">
+            <img src="img/gallery5.jpg" alt="Pink Room – French & strass designs" loading="lazy">
+          </div>
+          <div class="carousel-item">
+            <img src="img/gallery6.jpg" alt="Pink Room – Pink & romantic nail art" loading="lazy">
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <button class="carousel-btn prev">←</button>
+          <button class="carousel-btn next">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <div class="container">
+      <h2 id="testimonials-title">Τι λένε οι πελάτισσές μας</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial">
+          <p>«Τα νύχια μου έγιναν έργα τέχνης! Ο χώρος είναι υπέροχος και χαλαρωτικός.»</p>
+          <cite>— Σοφία Λ.</cite>
+        </div>
+        <div class="testimonial">
+          <p>«Το καλύτερο πεντικιούρ που έχω κάνει ποτέ. Πάντα καθαρά και επαγγελματικά.»</p>
+          <cite>— Μαρία Δ.</cite>
+        </div>
+        <div class="testimonial">
+          <p>«Οι custom σχεδίες μου κρατάνε εβδομάδες χωρίς κανένα πρόβλημα.»</p>
+          <cite>— Έμμα Ρ.</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 id="contact-title">Επικοινωνία</h2>
+      <div class="contact-content">
+        <p>Κλείστε ραντεβού στο Instagram @pinkroomathens!</p>
+        <a href="https://www.instagram.com/pinkroomathens/" target="_blank" class="btn">Πηγαίνετε στο Instagram</a>
+        <p style="margin-top:2rem; color:var(--gray);">
+          Τηλέφωνο: 216 2023933 | Αθήνα
+        </p>
+      </div>
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3145.035574647!2d23.725745315315!3d37.971845779722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd1f067043f1%3A0x2736354576668!2sSyntagma%20Square%2C%20Athens%20105%2057%2C%20Greece!5e0!3m2!1sen!2sus!4v1739200000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <h2 id="faq-title">Συχνές ερωτήσεις</h2>
+
+      <div class="faq-item">
+        <button class="faq-question">Πόσο διαρκεί ένα gel μανικιούρ;</button>
+        <div class="faq-answer">
+          <p>Συνήθως 3–4 εβδομάδες χωρίς ξεφλούδισμα, όταν γίνεται σωστή συντήρηση.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Πρέπει να κλείσω ραντεβού από πριν;</button>
+        <div class="faq-answer">
+          <p>Ναι, ειδικά τα Σαββατοκύριακα. Ιδανικά 5–14 μέρες νωρίτερα.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Τα προϊόντα σας είναι ασφαλή και vegan;</button>
+        <div class="faq-answer">
+          <p>Τα περισσότερα είναι 10-free, vegan & cruelty-free. Προτεραιότητα η υγεία νυχιών & δέρματος.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Μπορώ να κάνω refill αντί για full set;</button>
+        <div class="faq-answer">
+          <p>Ναι, όταν οι επεκτάσεις είναι σε καλή κατάσταση — είναι και πιο οικονομικό.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Ποια είναι η πολιτική ακύρωσης;</button>
+        <div class="faq-answer">
+          <p>Δωρεάν ακύρωση μέχρι 24 ώρες πριν. Μετά χρεώνεται 50%.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Έχετε δωροκάρτες;</button>
+        <div class="faq-answer">
+          <p>Ναι, από 50 € — ιδανικές για δώρο ή περιποίηση εαυτού.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p id="footer-text">© 2026 Pink Room — Χειροποίητη ομορφιά • Αθήνα</p>
+      <a href="https://www.instagram.com/pinkroomathens/" target="_blank">
+        <svg class="insta-icon" viewBox="0 0 24 24">
+          <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm5.25-4.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <a href="tel:2162023933" class="floating-call">
+    <img src="https://uxwing.com/wp-content/themes/uxwing/download/communication-chat-call/phone-call-white-icon.png" alt="Κλήση 216 2023933">
+  </a>
+  <a href="#" class="back-to-top" id="back-to-top">↑</a>
+
+  <script>
+    // Carousel
+    const inner = document.getElementById('carouselInner');
+    let current = 0;
+    const total = document.querySelectorAll('.carousel-item').length;
+
+    function showSlide(index) {
+      inner.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    document.querySelector('.next').onclick = () => {
+      current = (current + 1) % total;
+      showSlide(current);
+    };
+
+    document.querySelector('.prev').onclick = () => {
+      current = (current - 1 + total) % total;
+      showSlide(current);
+    };
+
+    setInterval(() => {
+      current = (current + 1) % total;
+      showSlide(current);
+    }, 5000);
+
+    // Language switcher
+    const texts = {
+      el: {
+        'hero-desc': 'Ομορφιά σε κάθε λεπτομέρεια — premium στούντιο νυχιών στην Αθήνα',
+        'book-btn': 'Κλείστε ραντεβού',
+        'services-btn': 'Δείτε υπηρεσίες',
+        'about-title': 'Σχετικά με εμάς',
+        'about-p1': 'Στο Pink Room δημιουργούμε σχέδια νυχιών με προσοχή στη λεπτομέρεια και απόλυτο σεβασμό στην υγεία των νυχιών σας. Χρησιμοποιούμε μόνο υψηλής ποιότητας, μη τοξικά προϊόντα σε έναν καθαρό, ήρεμο και φιλόξενο χώρο.',
+        'about-p2': 'Από το 2020 έχουμε γίνει ο αγαπημένος προορισμός εκατοντάδων γυναικών στην Αθήνα, χάρη στην ποιότητα, την υγιεινή και την προσωπική, ζεστή εξυπηρέτηση.',
+        'services-title': 'Οι υπηρεσίες μας',
+        'gallery-title': 'Η δουλειά μας',
+        'testimonials-title': 'Τι λένε οι πελάτισσές μας',
+        'contact-title': 'Επικοινωνία',
+        'contact-info': 'Για ραντεβού και απορίες στείλτε μας μήνυμα στο Instagram!',
+        'faq-title': 'Συχνές ερωτήσεις',
+        'footer-text': '© 2026 Pink Room — Χειροποίητη ομορφιά • Αθήνα'
+      },
+      en: {
+        'hero-desc': 'Beauty in every detail — premium nail studio in Athens',
+        'book-btn': 'Book appointment',
+        'services-btn': 'View services',
+        'about-title': 'About us',
+        'about-p1': 'At Pink Room we create nail designs with attention to detail and absolute respect for your nail health. We use only high-quality, non-toxic products in a clean, calm and welcoming space.',
+        'about-p2': 'Since 2020 we have become the favorite destination of hundreds of women in Athens, thanks to quality, hygiene and warm personal service.',
+        'services-title': 'Our services',
+        'gallery-title': 'Our work',
+        'testimonials-title': 'What our clients say',
+        'contact-title': 'Contact',
+        'contact-info': 'For appointments and questions send us a message on Instagram!',
+        'faq-title': 'Frequently asked questions',
+        'footer-text': '© 2026 Pink Room — Handcrafted beauty • Athens'
+      }
+    };
+
+    function setLanguage(lang) {
+      document.documentElement.lang = lang;
+      Object.entries(texts[lang]).forEach(([id, txt]) => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = txt;
+      });
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+      localStorage.setItem('lang', lang);
+    }
+
+    setLanguage(localStorage.getItem('lang') || 'el');
+
+    document.querySelectorAll('.lang-btn').forEach(btn =>
+      btn.onclick = () => setLanguage(btn.dataset.lang)
+    );
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.onclick = () => {
+        const ans = q.nextElementSibling;
+        const wasOpen = ans.classList.contains('show');
+        document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('show'));
+        document.querySelectorAll('.faq-question').forEach(qq => qq.classList.remove('active'));
+        if (!wasOpen) {
+          ans.classList.add('show');
+          q.classList.add('active');
+        }
+      };
+    });
+
+    // Back to top
+    const btt = document.getElementById('back-to-top');
+    window.onscroll = () => btt.classList.toggle('show', scrollY > 400);
+
+    // Burger menu
+    const burger = document.querySelector('.burger');
+    const menu = document.getElementById('nav-menu');
+    burger.onclick = () => {
+      burger.classList.toggle('active');
+      menu.classList.toggle('active');
+    };
+
+    menu.querySelectorAll('a').forEach(a => a.onclick = () => {
+      burger.classList.remove('active');
+      menu.classList.remove('active');
+    });
+
+    document.onclick = e => {
+      if (!burger.contains(e.target) && !menu.contains(e.target) && menu.classList.contains('active')) {
+        burger.classList.remove('active');
+        menu.classList.remove('active');
+      }
+    };
+  </script>
+</body>
+</html>
