@@ -235,13 +235,13 @@
     .btn:hover { background:var(--accent-dark); transform:translateY(-2px); }
 
     .btn-outline {
-      background:white;                     /* Solid white background */
-      border:1.8px solid var(--accent);     /* Pink outline */
+      background:white;
+      border:1.8px solid var(--accent);
       color:var(--text);
     }
 
     .btn-outline:hover {
-      background:var(--accent);             /* Turns pink on hover */
+      background:var(--accent);
       color:white;
       border-color:var(--accent);
     }
@@ -364,24 +364,30 @@
 
     .carousel-btn {
       pointer-events:auto;
-      background:rgba(255,255,255,.7);
+      background:transparent;
       border:none;
       width:48px;
       height:48px;
-      border-radius:50%;
-      font-size:1.5rem;
       cursor:pointer;
       transition:all .3s;
     }
 
-    .carousel-btn:hover {
-      background:white;
-      transform:scale(1.1);
+    .carousel-btn img {
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      transition:transform .3s;
+    }
+
+    .carousel-btn:hover img { transform:scale(1.15); }
+
+    .carousel-btn.prev img {
+      transform:rotate(180deg);
     }
 
     @media (max-width:640px) {
       .carousel-item { height:360px; }
-      .carousel-btn { width:44px; height:44px; font-size:1.3rem; }
+      .carousel-btn { width:44px; height:44px; }
     }
 
     /* Testimonials */
@@ -676,8 +682,12 @@
           </div>
         </div>
         <div class="carousel-controls">
-          <button class="carousel-btn prev">←</button>
-          <button class="carousel-btn next">→</button>
+          <button class="carousel-btn prev">
+            <img src="img/arrow.png" alt="Previous">
+          </button>
+          <button class="carousel-btn next">
+            <img src="img/arrow.png" alt="Next">
+          </button>
         </div>
       </div>
     </div>
