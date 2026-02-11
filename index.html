@@ -376,10 +376,13 @@
       width:100%;
       height:100%;
       object-fit:contain;
-      transition:transform .3s;
+      transition:transform .3s, opacity .3s;
     }
 
-    .carousel-btn:hover img { transform:scale(1.15); }
+    .carousel-btn:hover img {
+      transform:scale(1.15);
+      opacity:0.85;
+    }
 
     .carousel-btn.prev img {
       transform:rotate(180deg);
@@ -544,7 +547,6 @@
       visibility:hidden;
       transition:all .3s ease;
       z-index:99;
-      font-size:1.7rem;
     }
 
     .back-to-top.show {
@@ -552,7 +554,16 @@
       visibility:visible;
     }
 
-    .back-to-top:hover { transform:translateY(-4px); }
+    .back-to-top img {
+      width:28px;
+      height:28px;
+      object-fit:contain;
+      transition:transform .3s;
+    }
+
+    .back-to-top:hover img {
+      transform:translateY(-4px);
+    }
 
     @media (max-width:640px) {
       header { padding-top:14vh; padding-bottom:18vh; }
@@ -563,7 +574,8 @@
       .map { height:340px; }
       .floating-call,.back-to-top { width:56px; height:56px; }
       .floating-call img { width:26px; }
-      .back-to-top { bottom:6rem; font-size:1.6rem; }
+      .back-to-top img { width:24px; height:24px; }
+      .back-to-top { bottom:6rem; }
       .faq-question, .faq-question::after { color:#3d2e2a !important; }
     }
   </style>
@@ -683,10 +695,10 @@
         </div>
         <div class="carousel-controls">
           <button class="carousel-btn prev">
-            <img src="img/arrow.png" alt="Previous">
+            <img src="img/arrow.png" alt="Previous slide">
           </button>
           <button class="carousel-btn next">
-            <img src="img/arrow.png" alt="Next">
+            <img src="img/arrow.png" alt="Next slide">
           </button>
         </div>
       </div>
@@ -791,7 +803,9 @@
   <a href="tel:2162023933" class="floating-call">
     <img src="https://uxwing.com/wp-content/themes/uxwing/download/communication-chat-call/phone-call-white-icon.png" alt="Κλήση 216 2023933">
   </a>
-  <a href="#" class="back-to-top" id="back-to-top">↑</a>
+  <a href="#" class="back-to-top" id="back-to-top">
+    <img src="img/arrow.png" alt="Πάνω">
+  </a>
 
   <script>
     // Carousel with swipe support
